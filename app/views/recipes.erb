@@ -7,7 +7,7 @@
   <body>
     <% @recipes.each do |recipe| %>
       <h2>Recipe No. <%= recipe.id %></h2>
-      <a href="/recipes/<%= recipe.id %>">Link to <%= recipe.name %></a><br>
+      <a href="/recipes/<%= recipe.id %>">Link to the recipe for <%= recipe.name %></a><br>
       Name: <%= recipe.name %><br>
       Ingredients: <%= recipe.ingredients %><br>
       Cook Time: <%= recipe.cook_time %><br>
