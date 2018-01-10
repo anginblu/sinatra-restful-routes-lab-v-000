@@ -42,7 +42,7 @@ class ApplicationController < Sinatra::Base
     unless params[:name] == nil
       @recipe.name = params[:name] unless params[:name] == nil
     end
-    unless params[:ingredients] == nil
+    if params[:ingredients] == nil
       @recipe.ingredients = params[:ingredients]
     end
     unless params[:cook_time] == nil
