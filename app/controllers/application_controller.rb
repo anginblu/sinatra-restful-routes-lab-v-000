@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.name = params[:name] unless params[:name] == nil
     @recipe.ingredients = params[:ingredients] unless params[:ingredients] == nil
-    @recipe.cook_time = params[:cook_time] unless params[:ingredients] == nil
+    @recipe.cook_time = params[:cook_time] unless params[:cook_time] == nil
     @recipe.save
     redirect to "/recipes/#{@recipe.id}"
   end
