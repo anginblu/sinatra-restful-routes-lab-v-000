@@ -39,6 +39,7 @@ class ApplicationController < Sinatra::Base
 
   patch '/recipes/:id' do #edit action
     @recipe = Recipe.find_by_id(params[:id])
+    binding.pry
     if params[:name] != nil
       @recipe.name = params[:name] unless params[:name] == nil
     end
