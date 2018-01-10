@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
     if params[:ingredients] != nil
       @recipe.ingredients = params[:ingredients]
     end
-    if params[:cook_time] == nil
+    if params[:cook_time] != nil
      @recipe.cook_time = params[:cook_time]
     end
     @recipe.save
